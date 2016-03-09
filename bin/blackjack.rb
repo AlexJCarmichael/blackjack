@@ -1,3 +1,5 @@
+require_relative "../lib/card.rb"
+require_relative "../lib/deck.rb"
 
 def dance_with_em
   puts "So you want to play a game."
@@ -15,4 +17,5 @@ end
 
 class PlayBlackjack
   dance_with_em
+  deck = Deck.new
 end
