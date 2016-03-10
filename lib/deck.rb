@@ -11,4 +11,10 @@ class Deck
       end
     end
   end
+  def draw_card
+    @cards.shift
+  end
+  def shuffle_up
+    @cards.shuffle!
+  end
 end

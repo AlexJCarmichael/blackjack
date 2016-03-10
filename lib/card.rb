@@ -10,24 +10,29 @@ class Card
     @card = [suit, value]
   end
 
-  def display_value
+  def display_rank
     case @value
-    when @value == 11
-      @value = "J"
-    when @value == 12
-      @value = "Q"
-    when @value == 13
-      @value = "K"
-    when @value == 14
-      @value = "A"
+    when  11
+      return "J"
+    when 12
+      return "Q"
+    when 13
+      return "K"
+    when 14
+      return "A"
+    else
+      return @value
     end
   end
-  
-    def display_rank
-      if @value < 10
-        @value = 10
-      elsif @value == 14
-        @value = 11
-      end
+
+  def display_value
+    case @value
+    when  14
+      return 11
+    when (10..13)
+      return 10
+    else
+      return @value
     end
+  end
 end
